@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="DAO/DAO.csproj" />
+  <Project Path="Forms/Forms.csproj" />
+  <Project Path="ModelsClass/ModelsClass.csproj" />
+</Solution>
