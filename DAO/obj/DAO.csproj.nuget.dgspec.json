@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\DAO\\DAO.csproj": {}
+    "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\DAO\\DAO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\DAO\\DAO.csproj": {
+    "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\DAO\\DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\DAO\\DAO.csproj",
+        "projectUniqueName": "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\DAO\\DAO.csproj",
         "projectName": "DAO",
-        "projectPath": "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\DAO\\DAO.csproj",
-        "packagesPath": "C:\\Users\\Aprendiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\DAO\\obj\\",
+        "projectPath": "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\DAO\\DAO.csproj",
+        "packagesPath": "C:\\Users\\AnaAl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\DAO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Aprendiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AnaAl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,8 +33,8 @@
             "framework": "net10.0-windows7.0",
             "targetAlias": "net10.0-windows",
             "projectReferences": {
-              "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\ModelsClass\\ModelsClass.csproj": {
-                "projectPath": "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\ModelsClass\\ModelsClass.csproj"
+              "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\ModelsClass\\ModelsClass.csproj": {
+                "projectPath": "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\ModelsClass\\ModelsClass.csproj"
               }
             }
           }
@@ -50,7 +49,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0-windows": {
@@ -85,7 +84,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -379,20 +378,20 @@
         }
       }
     },
-    "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\ModelsClass\\ModelsClass.csproj": {
+    "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\ModelsClass\\ModelsClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\ModelsClass\\ModelsClass.csproj",
+        "projectUniqueName": "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\ModelsClass\\ModelsClass.csproj",
         "projectName": "ModelsClass",
-        "projectPath": "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\ModelsClass\\ModelsClass.csproj",
-        "packagesPath": "C:\\Users\\Aprendiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aprendiz\\Downloads\\ProjectAmonic\\ModelsClass\\obj\\",
+        "projectPath": "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\ModelsClass\\ModelsClass.csproj",
+        "packagesPath": "C:\\Users\\AnaAl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\ModelsClass\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Aprendiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AnaAl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -401,7 +400,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -421,7 +419,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0-windows": {
@@ -452,7 +450,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

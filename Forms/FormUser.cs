@@ -103,6 +103,8 @@ namespace Forms
             this.Visible = false;
             FormChangeRol formChangeRol = new(seleccionado);
             formChangeRol.ShowDialog();
+            pintarFilas();
+            CargarDatos();
             this.Visible = true;
         }
 
@@ -123,7 +125,7 @@ namespace Forms
         private void dgvUsers_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             var empleado = e.RowIndex;
-            var list = userDAO.GetListUsers();
+            var list = userDAO.FiltrarUsuarios(CboxOffices.Text);
             seleccionado = list[empleado];
         }
     }

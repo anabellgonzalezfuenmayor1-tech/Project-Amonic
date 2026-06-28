@@ -15,6 +15,7 @@ namespace Forms
         List<Office> oficinas = new();
         OfficesDAO officesDAO = new();
         UserDAO userDAO = new();
+        RolDao rolDao = new RolDao();
         User Seleccionado;
         int officeIndex;
 
@@ -59,21 +60,33 @@ namespace Forms
         {
             if (!string.IsNullOrEmpty(txtLname.Text) && !string.IsNullOrEmpty(txtAdress.Text) && !string.IsNullOrEmpty(txtFname.Text))
             {
+                int roleId = 0;
+                int officeId = 0;
+                string rolSeleccionado;
+                if (rbUser.Checked)
+                {
+                    rolSeleccionado = "User";
+                }
+                else
+                {
+                    rolSeleccionado = "Administrator";
+                }
 
-            
-
-                int officeID = oficinas[cboxOffices.SelectedIndex].OfficeId;
-                int roleID = rbAdministrador.Checked ? 1 : 2;
-
-                userDAO.ActualizarDatos(
-                    Seleccionado.UserId,
-                    txtAdress.Text.Trim(),
-                    txtFname.Text.Trim(),
-                    txtLname.Text.Trim(),
-                    officeID,
-                    roleID
-                    );
-                MessageBox.Show("Usuario actualizado con exito", "Actulizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                foreach (var rol in rolDao.GetListRoles()){
+                    if (rol.title == rolSeleccionado)
+                    {
+                        roleId = rol.RolId;
+                    }
+                }
+                foreach (var of in officesDAO.GetListOffices())
+                {
+                    if (of.OfficeName == cboxOffices.Text)
+                    {
+                        officeId = of.OfficeId;
+                    }
+                }
+                userDAO.ActualizarDatos(Seleccionado.UserId, txtAdress.Text, txtFname.Text, txtLname.Text, officeId, roleId);
+                MessageBox.Show("Datos actualizados correctamente");
             }
             else
             {

@@ -16,7 +16,7 @@ namespace ModelsData
             using (SqlConnection connection = GetConnection())
             {
                 connection.Open();
-                string query = "SELECT * FROM Roles;";
+                string query = "SELECT * FROM Rol;";
                 using (SqlCommand command = new(query, connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
