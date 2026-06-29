@@ -142,9 +142,9 @@ namespace ModelsData
             using (SqlConnection connection = GetConnection())
             {
                 connection.Open();
-                string query = "UPDATE Users" +
-                    " SET Active = @Active" +
-                    " WHERE ID = @ID;";
+                string query = "UPDATE Users " +
+                    "SET Active = @Active " +
+                    "WHERE ID = @ID;";
                 using (SqlCommand comando = new(query , connection))
                 {
                     comando.Parameters.AddWithValue("@Active", Active);

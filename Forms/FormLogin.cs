@@ -15,7 +15,6 @@ namespace Forms
         public FormLogin()
         {
             InitializeComponent();
-
         }
 
 
@@ -58,6 +57,8 @@ namespace Forms
                 MessageBox.Show("Se ha bloqueado el usuario");
                 lblEspere.Visible = true;
                 btnLogin.Enabled = false;
+                txtPass.Enabled = false;
+                txtUser.Enabled = false;
                 timeIntentos.Start();
             }
         }
@@ -96,6 +97,8 @@ namespace Forms
             {
                 errores = 0;
                 btnLogin.Enabled = true;
+                txtUser.Enabled = true;
+                txtPass.Enabled = true;
                 time = 10;
                 lblEspere.Visible = false;
                 lblEspere.Text = $"Espere: {time} segundos";

@@ -137,7 +137,6 @@ namespace Forms
             userDAO.CambiarEstado(id, estado);
             pintarFilas();
             CargarDatos();
-            MessageBox.Show("Estado del usuario cambiado");
         }
     }
 }
