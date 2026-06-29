@@ -137,39 +137,55 @@ namespace ModelsData
             }
         }
 
-        // PARA ENCRIPTAR LAS CONTRASEÑAS DE LOS USUARIOS SE HACE UNA SOLA VEZ EN EL METODO CONTRUCTOR DEL LOGIN
+        public void CambiarEstado(int id, bool Active)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                string query = "UPDATE Users" +
+                    " SET Active = @Active" +
+                    " WHERE ID = @ID;";
+                using (SqlCommand comando = new(query , connection))
+                {
+                    comando.Parameters.AddWithValue("@Active", Active);
+                    comando.Parameters.AddWithValue("@ID", id);
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
 
-        //public void EncriptarContraseñasExistentes()
-        //{
-        //    List<(int Id, string PasswordActual)> usuarios = new();
-        //    using (SqlConnection connection = GetConnection())
-        //    {
-        //        connection.Open();
-        //        string query = "SELECT ID, Password FROM Users";
-        //        using (SqlCommand command = new(query, connection))
-        //        using (SqlDataReader reader = command.ExecuteReader())
-        //        {
-        //            while (reader.Read())
-        //            {
-        //                usuarios.Add((Convert.ToInt32(reader["ID"]), reader["Password"].ToString()));
-        //            }
-        //        }
-        //    }
-        //    using (SqlConnection connection = GetConnection())
-        //    {
-        //        connection.Open();
-        //        foreach (var usuario in usuarios)
-        //        {
-        //            string hash = BCrypt.Net.BCrypt.HashPassword(usuario.PasswordActual);
-        //            string queryUpdate = "UPDATE Users SET Password = @Hash WHERE ID = @Id";
-        //            using (SqlCommand command = new(queryUpdate, connection))
-        //            {
-        //                command.Parameters.AddWithValue("@Hash", hash);
-        //                command.Parameters.AddWithValue("@Id", usuario.Id);
-        //                command.ExecuteNonQuery();
-        //            }
-        //        }
-        //    }
-        //}
+        // PARA ENCRIPTAR LAS CONTRASEÑAS DE LOS USUARIOS SE HACE UNA SOLA VEZ EN EL METODO CONTRUCTOR DEL LOGIN
+        public void EncriptarContraseñasExistentes()
+        {
+            List<(int Id, string PasswordActual)> usuarios = new();
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                string query = "SELECT ID, Password FROM Users";
+                using (SqlCommand command = new(query, connection))
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        usuarios.Add((Convert.ToInt32(reader["ID"]), reader["Password"].ToString()));
+                    }
+                }
+            }
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                foreach (var usuario in usuarios)
+                {
+                    string hash = BCrypt.Net.BCrypt.HashPassword(usuario.PasswordActual);
+                    string queryUpdate = "UPDATE Users SET Password = @Hash WHERE ID = @Id";
+                    using (SqlCommand command = new(queryUpdate, connection))
+                    {
+                        command.Parameters.AddWithValue("@Hash", hash);
+                        command.Parameters.AddWithValue("@Id", usuario.Id);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
     }
 }

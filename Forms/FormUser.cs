@@ -128,5 +128,16 @@ namespace Forms
             var list = userDAO.FiltrarUsuarios(CboxOffices.Text);
             seleccionado = list[empleado];
         }
+
+        private void btnEnabledUsers_Click(object sender, EventArgs e)
+        {
+            int id = seleccionado.UserId;
+            bool estado = !seleccionado.Active;
+
+            userDAO.CambiarEstado(id, estado);
+            pintarFilas();
+            CargarDatos();
+            MessageBox.Show("Estado del usuario cambiado");
+        }
     }
 }
