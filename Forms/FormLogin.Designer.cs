@@ -128,7 +128,7 @@
             // lblEspere
             // 
             lblEspere.AutoSize = true;
-            lblEspere.Location = new Point(69, 24);
+            lblEspere.Location = new Point(67, 24);
             lblEspere.Name = "lblEspere";
             lblEspere.Size = new Size(116, 15);
             lblEspere.TabIndex = 8;

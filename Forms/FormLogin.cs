@@ -32,29 +32,37 @@ namespace Forms
                 {
                     if (userDAO.ValidarContraseña(txtUser.Text, txtPass.Text))
                     {
-                        this.Visible = false;
-                        FormOffices formUser = new(txtUser.Text);
-                        formUser.ShowDialog();
-                        this.Visible = true;
-                        txtPass.Text = string.Empty;
-                        txtUser.Text = string.Empty;
-                        errores = 0;
+                        if (userDAO.VerificarEstado(txtUser.Text))
+                        {
+                            this.Visible = false;
+                            FormOffices formUser = new(txtUser.Text);
+                            formUser.ShowDialog();
+                            this.Visible = true;
+                            txtPass.Text = string.Empty;
+                            txtUser.Text = string.Empty;
+                            errores = 0;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Your account is disabled; please contact an administrator", "Account Status");
+                            errores++;
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Contraseña incorrecta");
+                        MessageBox.Show("Password Incorrect");
                         errores++;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Usuario no encontrado");
+                    MessageBox.Show("User not found");
                     errores++;
                 }
             }
             else
             {
-                MessageBox.Show("Se ha bloqueado el usuario");
+                MessageBox.Show("Your user is blocked");
                 lblEspere.Visible = true;
                 btnLogin.Enabled = false;
                 txtPass.Enabled = false;
@@ -90,7 +98,7 @@ namespace Forms
             if (time > 0)
             {
                 time--;
-                lblEspere.Text = $"Espere: {time} segundos";
+                lblEspere.Text = $"Wait: {time} seconds";
 
             }
             else
@@ -101,7 +109,7 @@ namespace Forms
                 txtPass.Enabled = true;
                 time = 10;
                 lblEspere.Visible = false;
-                lblEspere.Text = $"Espere: {time} segundos";
+                lblEspere.Text = $"Wait: {time} seconds";
                 timeIntentos.Stop();
             }
         }

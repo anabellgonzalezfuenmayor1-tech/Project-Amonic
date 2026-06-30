@@ -54,7 +54,7 @@ namespace Forms
 
         public void VerificarUser()
         {
-            lblRol.Text = $"Bienvenido señor(a) {userDAO.GetRol(Email)}";
+            lblRol.Text = $"Welcome {userDAO.GetRol(Email)}";
             btnChangeRol.Visible = userDAO.GetRol(Email) != "User";
             addUserToolStripMenuItem.Visible = userDAO.GetRol(Email) != "User";
             btnEnabledUsers.Visible = userDAO.GetRol(Email) != "User";
@@ -77,8 +77,6 @@ namespace Forms
                 if (row.Cells["Active"].Value?.ToString() == "True")
                 {
                     row.DefaultCellStyle.ForeColor = Color.Black;
-
-                    // row.DefaultCellStyle.BackColor = Color.LightGreen;
                     if (row.Cells[2].Value?.ToString() != "User")
                     {
                         row.DefaultCellStyle.BackColor = Color.LightGreen;

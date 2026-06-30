@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ONzlG2dVwM4=",
+  "dgSpecHash": "ZXtB1K89dYs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\AnaAl\\source\\repos\\Project-Amonic\\ModelsClass\\ModelsClass.csproj",
+  "projectFilePath": "C:\\Users\\Aprendiz\\Downloads\\Project-Amonic\\ModelsClass\\ModelsClass.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\AnaAl\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512"
+    "C:\\Users\\Aprendiz\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512"
   ],
   "logs": []
 }

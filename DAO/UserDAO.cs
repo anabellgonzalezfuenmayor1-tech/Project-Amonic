@@ -59,6 +59,19 @@ namespace ModelsData
 
         }
 
+        public bool VerificarEstado(string email)
+        {
+            foreach (var user in GetListUsers())
+            {
+                if (user.Email == email)
+                {
+                    bool estado = user.Active;
+                    return estado;
+                }
+            }
+            return false;
+        }
+
         public bool ExistenciaUsuario(string email)
         {
             if (GetListUsers().Any(d => d.Email == email))
@@ -67,6 +80,7 @@ namespace ModelsData
             }
             return false;
         }
+
         public string GetRol(string email)
         {
             return GetListUsers().FirstOrDefault(u => u.Email == email)?.RolName ?? "";

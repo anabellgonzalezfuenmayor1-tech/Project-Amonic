@@ -50,3 +50,16 @@ C:\Users\AnaAl\source\repos\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows
 C:\Users\AnaAl\source\repos\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\refint\ModelsClass.dll
 C:\Users\AnaAl\source\repos\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ModelsClass.pdb
 C:\Users\AnaAl\source\repos\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ref\ModelsClass.dll
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\bin\Debug\net10.0-windows\ModelsClass.deps.json
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\bin\Debug\net10.0-windows\ModelsClass.dll
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\bin\Debug\net10.0-windows\ModelsClass.pdb
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ModelsClass.csproj.AssemblyReference.cache
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ModelsClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ModelsClass.AssemblyInfoInputs.cache
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ModelsClass.AssemblyInfo.cs
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ModelsClass.csproj.CoreCompileInputs.cache
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ModelsClass.sourcelink.json
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ModelsClass.dll
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\refint\ModelsClass.dll
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ModelsClass.pdb
+C:\Users\Aprendiz\Downloads\Project-Amonic\ModelsClass\obj\Debug\net10.0-windows\ref\ModelsClass.dll

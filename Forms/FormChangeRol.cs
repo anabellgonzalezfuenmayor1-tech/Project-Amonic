@@ -86,11 +86,12 @@ namespace Forms
                     }
                 }
                 userDAO.ActualizarDatos(Seleccionado.UserId, txtAdress.Text, txtFname.Text, txtLname.Text, officeId, roleId);
-                MessageBox.Show("Datos actualizados correctamente");
+                MessageBox.Show("Updated data correctly");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Porfavor completa todos los campos", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please complete all the inputs", "Incomplete Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }

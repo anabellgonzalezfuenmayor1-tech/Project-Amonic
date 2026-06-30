@@ -44,25 +44,13 @@ namespace Forms
                string.IsNullOrWhiteSpace(txtLastName.Text) ||
                string.IsNullOrWhiteSpace(txtPass.Text))
             {
-                MessageBox.Show("Por favor completa todos los campos.");
+                MessageBox.Show("Please, complete all the inputs");
                 return;
             }
 
             string officeNameSeleccionado = cbOffices.SelectedItem?.ToString();
 
-            if (string.IsNullOrWhiteSpace(officeNameSeleccionado) || officeNameSeleccionado == "All offices")
-            {
-                MessageBox.Show("Selecciona una oficina válida.");
-                return;
-            }
-
             var oficinaSeleccionada = officesDAO.GetListOffices().FirstOrDefault(o => o.OfficeName == officeNameSeleccionado);
-
-            if (oficinaSeleccionada == null)
-            {
-                MessageBox.Show("No se encontró la oficina seleccionada.");
-                return;
-            }
 
             string email = txtEmail.Text.Trim().ToLower();
             string firstName = txtFirstName.Text.Trim();
@@ -75,7 +63,7 @@ namespace Forms
             {
                 if (userDAO.GetListUsers().Any(u => u.Email == email))
                 {
-                    MessageBox.Show("Usuario ya existente");
+                    MessageBox.Show("This User Exist.");
 
                 }
                 else
@@ -84,21 +72,19 @@ namespace Forms
 
                     if (exito)
                     {
-                        MessageBox.Show("Usuario creado correctamente.");
+                        MessageBox.Show("User created correctly.");
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo crear el usuario. Intenta de nuevo.");
+                        MessageBox.Show("Can't create the user. Try Again.");
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Fecha de nacimiento invalida");
+                MessageBox.Show("Invalid date of birth");
             }
-            
-            
         }
     }
 }
