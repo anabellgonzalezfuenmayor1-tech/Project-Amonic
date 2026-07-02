@@ -34,13 +34,29 @@ namespace Forms
                     {
                         if (userDAO.VerificarEstado(txtUser.Text))
                         {
-                            this.Visible = false;
-                            FormOffices formUser = new(txtUser.Text);
-                            formUser.ShowDialog();
-                            this.Visible = true;
-                            txtPass.Text = string.Empty;
-                            txtUser.Text = string.Empty;
-                            errores = 0;
+                            if (userDAO.GetRol(txtUser.Text) != "User")
+                            {
+                                this.Visible = false;
+                                FormManager formUser = new(txtUser.Text);
+                                formUser.ShowDialog();
+                                this.Visible = true;
+                                txtPass.Text = string.Empty;
+                                txtUser.Text = string.Empty;
+                                errores = 0;
+
+                            }
+                            else
+                            {
+                                
+                                this.Visible = false;
+                                FormUser formUser = new(txtUser.Text);
+                                formUser.ShowDialog();
+                                this.Visible = true;
+                                txtPass.Text = string.Empty;
+                                txtUser.Text = string.Empty;
+                                errores = 0;
+
+                            }
                         }
                         else
                         {

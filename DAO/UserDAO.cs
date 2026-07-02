@@ -86,6 +86,19 @@ namespace ModelsData
             return GetListUsers().FirstOrDefault(u => u.Email == email)?.RolName ?? "";
         }
 
+        public User GetUsuario(string email)
+        {
+            User usuario = new();
+            foreach (var user in GetListUsers())
+            {
+                if (user.Email == email)
+                {
+                    return user;
+                }
+            }
+            return usuario;
+        }
+
         public bool ValidarContraseña(string email, string pass)
         {
             foreach (var user in GetListUsers())

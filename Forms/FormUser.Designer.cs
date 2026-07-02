@@ -1,6 +1,6 @@
 ﻿namespace Forms
 {
-    partial class FormOffices
+    partial class FormUser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,156 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CboxOffices = new ComboBox();
-            dgvUsers = new DataGridView();
-            ColName = new DataGridViewTextBoxColumn();
-            ColLastName = new DataGridViewTextBoxColumn();
-            ColAge = new DataGridViewTextBoxColumn();
-            ColUserRol = new DataGridViewTextBoxColumn();
-            ColEmail = new DataGridViewTextBoxColumn();
-            ColOffice = new DataGridViewTextBoxColumn();
-            lblRol = new Label();
-            label1 = new Label();
-            btnChangeRol = new Button();
-            btnEnabledUsers = new Button();
+            components = new System.ComponentModel.Container();
             menuStrip1 = new MenuStrip();
-            addUserToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)dgvUsers).BeginInit();
+            lblRol = new Label();
+            lblTiempo = new Label();
+            timerTimeSpend = new System.Windows.Forms.Timer(components);
             menuStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // CboxOffices
-            // 
-            CboxOffices.DropDownStyle = ComboBoxStyle.DropDownList;
-            CboxOffices.FormattingEnabled = true;
-            CboxOffices.Location = new Point(96, 76);
-            CboxOffices.Margin = new Padding(3, 4, 3, 4);
-            CboxOffices.Name = "CboxOffices";
-            CboxOffices.Size = new Size(188, 28);
-            CboxOffices.TabIndex = 0;
-            CboxOffices.SelectedIndexChanged += CboxOffices_SelectedIndexChanged;
-            // 
-            // dgvUsers
-            // 
-            dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsers.Columns.AddRange(new DataGridViewColumn[] { ColName, ColLastName, ColAge, ColUserRol, ColEmail, ColOffice });
-            dgvUsers.Location = new Point(34, 117);
-            dgvUsers.Margin = new Padding(3, 4, 3, 4);
-            dgvUsers.Name = "dgvUsers";
-            dgvUsers.RowHeadersWidth = 51;
-            dgvUsers.Size = new Size(729, 312);
-            dgvUsers.TabIndex = 1;
-            dgvUsers.RowEnter += dgvUsers_RowEnter;
-            // 
-            // ColName
-            // 
-            ColName.DataPropertyName = "FirstName";
-            ColName.HeaderText = "Name";
-            ColName.MinimumWidth = 6;
-            ColName.Name = "ColName";
-            ColName.ReadOnly = true;
-            // 
-            // ColLastName
-            // 
-            ColLastName.DataPropertyName = "LastName";
-            ColLastName.HeaderText = "Last Name";
-            ColLastName.MinimumWidth = 6;
-            ColLastName.Name = "ColLastName";
-            ColLastName.ReadOnly = true;
-            // 
-            // ColAge
-            // 
-            ColAge.DataPropertyName = "Edad";
-            ColAge.HeaderText = "Age";
-            ColAge.MinimumWidth = 6;
-            ColAge.Name = "ColAge";
-            ColAge.ReadOnly = true;
-            // 
-            // ColUserRol
-            // 
-            ColUserRol.DataPropertyName = "RolName";
-            ColUserRol.HeaderText = "User Rol";
-            ColUserRol.MinimumWidth = 6;
-            ColUserRol.Name = "ColUserRol";
-            ColUserRol.ReadOnly = true;
-            // 
-            // ColEmail
-            // 
-            ColEmail.DataPropertyName = "Email";
-            ColEmail.HeaderText = "Email Address";
-            ColEmail.MinimumWidth = 6;
-            ColEmail.Name = "ColEmail";
-            ColEmail.ReadOnly = true;
-            // 
-            // ColOffice
-            // 
-            ColOffice.DataPropertyName = "OfficeName";
-            ColOffice.HeaderText = "Office";
-            ColOffice.MinimumWidth = 6;
-            ColOffice.Name = "ColOffice";
-            ColOffice.ReadOnly = true;
-            // 
-            // lblRol
-            // 
-            lblRol.AutoSize = true;
-            lblRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblRol.Location = new Point(34, 39);
-            lblRol.Name = "lblRol";
-            lblRol.Size = new Size(189, 28);
-            lblRol.TabIndex = 2;
-            lblRol.Text = "Bienvenido señor(a) ";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(34, 83);
-            label1.Name = "label1";
-            label1.Size = new Size(58, 20);
-            label1.TabIndex = 3;
-            label1.Text = "Offices:";
-            // 
-            // btnChangeRol
-            // 
-            btnChangeRol.Location = new Point(34, 437);
-            btnChangeRol.Margin = new Padding(3, 4, 3, 4);
-            btnChangeRol.Name = "btnChangeRol";
-            btnChangeRol.Size = new Size(117, 31);
-            btnChangeRol.TabIndex = 6;
-            btnChangeRol.Text = "Change Rol";
-            btnChangeRol.UseVisualStyleBackColor = true;
-            btnChangeRol.Click += btnChangeRol_Click;
-            // 
-            // btnEnabledUsers
-            // 
-            btnEnabledUsers.Location = new Point(158, 437);
-            btnEnabledUsers.Margin = new Padding(3, 4, 3, 4);
-            btnEnabledUsers.Name = "btnEnabledUsers";
-            btnEnabledUsers.Size = new Size(142, 31);
-            btnEnabledUsers.TabIndex = 7;
-            btnEnabledUsers.Text = "Enabled / Disable Login";
-            btnEnabledUsers.UseVisualStyleBackColor = true;
-            btnEnabledUsers.Click += btnEnabledUsers_Click;
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { addUserToolStripMenuItem, exitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { exitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 3, 0, 3);
-            menuStrip1.Size = new Size(792, 30);
-            menuStrip1.TabIndex = 8;
+            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // addUserToolStripMenuItem
-            // 
-            addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            addUserToolStripMenuItem.Size = new Size(84, 24);
-            addUserToolStripMenuItem.Text = "Add User";
-            addUserToolStripMenuItem.Click += addUserToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
@@ -186,24 +54,41 @@
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
-            // FormOffices
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRol.Location = new Point(12, 28);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(189, 28);
+            lblRol.TabIndex = 3;
+            lblRol.Text = "Bienvenido señor(a) ";
+            // 
+            // lblTiempo
+            // 
+            lblTiempo.AutoSize = true;
+            lblTiempo.Location = new Point(395, 72);
+            lblTiempo.Name = "lblTiempo";
+            lblTiempo.Size = new Size(159, 20);
+            lblTiempo.TabIndex = 4;
+            lblTiempo.Text = "Time spend on system:";
+            // 
+            // timerTimeSpend
+            // 
+            timerTimeSpend.Interval = 1000;
+            timerTimeSpend.Tick += timerTimeSpend_Tick;
+            // 
+            // FormUser
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(792, 480);
-            Controls.Add(btnEnabledUsers);
-            Controls.Add(btnChangeRol);
-            Controls.Add(label1);
+            ClientSize = new Size(800, 450);
+            Controls.Add(lblTiempo);
             Controls.Add(lblRol);
-            Controls.Add(dgvUsers);
-            Controls.Add(CboxOffices);
             Controls.Add(menuStrip1);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "FormOffices";
-            StartPosition = FormStartPosition.CenterScreen;
+            MainMenuStrip = menuStrip1;
+            Name = "FormUser";
             Text = "FormUser";
-            Load += FormOffices_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvUsers).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -212,20 +97,10 @@
 
         #endregion
 
-        private ComboBox CboxOffices;
-        private DataGridView dgvUsers;
-        private Label lblRol;
-        private Label label1;
-        private Button btnChangeRol;
-        private Button btnEnabledUsers;
-        private DataGridViewTextBoxColumn ColName;
-        private DataGridViewTextBoxColumn ColLastName;
-        private DataGridViewTextBoxColumn ColAge;
-        private DataGridViewTextBoxColumn ColUserRol;
-        private DataGridViewTextBoxColumn ColEmail;
-        private DataGridViewTextBoxColumn ColOffice;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem addUserToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private Label lblRol;
+        private Label lblTiempo;
+        private System.Windows.Forms.Timer timerTimeSpend;
     }
 }
